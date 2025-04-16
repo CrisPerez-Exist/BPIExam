@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "6974a451-57de-4a5d-84fc-5f7339039c08",
+		"name": "BPIExam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44040177",
+		"_collection_link": "https://criskerwinperez.postman.co/workspace/Cris-Kerwin-Perez's-Workspace~31d2ce6a-0cb0-41df-8638-4f456a9b4419/collection/44040177-6974a451-57de-4a5d-84fc-5f7339039c08?action=share&source=collection_link&creator=44040177"
+	},
+	"item": [
+		{
+			"name": "Project Plan",
+			"item": [
+				{
+					"name": "GET All Project Plan",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/project-plan/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"project-plan",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Project Plan",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/project-plan/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"project-plan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Create Project Plan",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"projectName\": \"Project 1\",\n    \"projectDescription\": \"Project Description 1\",\n    \"tasks\": [\n        {\n            \"id\": 1\n        },\n        {\n            \"id\": 2\n        },\n        {\n            \"id\": 3\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/project-plan/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"project-plan",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Create Project Plan Copy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"projectDescription\": \"Updated Project Description 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/project-plan/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"project-plan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All Calculate Schedule",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/project-plan/calculate-schedule/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"project-plan",
+								"calculate-schedule",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Calculate Schedule",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/project-plan/calculate-schedule/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"project-plan",
+								"calculate-schedule",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "GET All Task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/task/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/task/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Task Dependent",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/task/dependent/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								"dependent",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Create Task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"taskName\": \"Task 1\",\n  \"taskDescription\": \"Task Description 1\",\n  \"isDone\": false,\n  \"duration\": 30,\n  \"projectPlanEntity\" : {\"id\" : 1},\n  \"taskDependency\" : [\n    {\"id\": 1}\n  ] \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/task/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Update Task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"taskDescription\": \"Updated Task Description 3\",\n  \"projectPlanEntity\" : {\"id\" : 1},\n  \"taskDependency\" : [\n    {\"id\": 1},\n    {\"id\": 2}\n  ] \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/task/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Delete Task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/task/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Initial Data",
+			"item": [
+				{
+					"name": "POST Create Task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"taskName\": \"Task 1\",\n  \"taskDescription\": \"Task Description 1\",\n  \"isDone\": false,\n  \"duration\": 30\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/task/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Create Task 2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"taskName\": \"Task 2\",\n  \"taskDescription\": \"Task Description 2\",\n  \"isDone\": false,\n  \"duration\": 120\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/task/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Create Task 3",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"taskName\": \"Task 3\",\n  \"taskDescription\": \"Task Description 3\",\n  \"isDone\": false,\n  \"duration\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/task/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Step-By-Step-Process",
+			"item": [
+				{
+					"name": "POST Create Task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"taskName\": \"Task 1\",\n  \"taskDescription\": \"Task Description 1\",\n  \"isDone\": false,\n  \"duration\": 30\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/task/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Create Task 2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"taskName\": \"Task 2\",\n  \"taskDescription\": \"Task Description 2\",\n  \"isDone\": false,\n  \"duration\": 120\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/task/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Create Task 3",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"taskName\": \"Task 3\",\n  \"taskDescription\": \"Task Description 3\",\n  \"isDone\": false,\n  \"duration\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/task/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Create Project Plan",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"projectName\": \"Project 1\",\n    \"projectDescription\": \"Project Description 1\",\n    \"tasks\": [\n        {\n            \"id\": 1\n        },\n        {\n            \"id\": 2\n        },\n        {\n            \"id\": 3\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/project-plan/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"project-plan",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Calculate Schedule",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/project-plan/calculate-schedule/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"project-plan",
+								"calculate-schedule",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
