@@ -13,7 +13,9 @@ A Java Spring Boot Application that Calculates Schedule of a Project Plan
 
 ---
 **NOTE**
+
 While the application is running, Go to http://localhost:8080/h2-console in your browser.
+
 ---
 
 # API Endpoints
